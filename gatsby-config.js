@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `CodePen Meetup Twin Cities`,
+    title: `Twin Cities CodePen Meetup`,
     description: `Create, inspire and share at our online monthly meetup`,
     author: `@andreaedstrom`,
   },
@@ -30,6 +30,36 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     `gatsby-plugin-offline`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `IBM Plex Serif`,
+            variants: [`400`, `400i`, `700`, `700i`,]
+          },
+          {
+            family: `IBM Plex Sans`,
+            variants: [`700`]
+          },
+        ],
+      },
+    }
+    // {
+    //   resolve: `gatsby-plugin-google-fonts`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: `IBM Plex Serif`,
+    //         varients: [`400`,`400i`,`700`,`700i`]
+    //       },
+    //       {
+    //         family: `IBM Plex Sans`,
+    //         varients: [`700`,`700i`]
+    //       },
+    //     ],
+    //   }
+    // }
   ],
 }
