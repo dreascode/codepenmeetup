@@ -96,7 +96,7 @@ $max-legacy-width: 60em;
 //link
 @mixin link(){
     background-color: $color-white;
-    border: 3px solid $color-teal;
+    border: 3px solid $color-cyan;
     line-height: 1.6;
     border-radius: 28px;
     display: inline-block;
@@ -108,9 +108,9 @@ $max-legacy-width: 60em;
     transition: all $_btn-transition;
 
     &:hover {
-      background-color: $color-teal;
+      background-color: $color-cyan;
       color: $color-white;
-      border-color: $color-teal;
+      border-color: $color-cyan;
     }
 
     @include media($media-tablet) {

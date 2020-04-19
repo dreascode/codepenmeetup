@@ -81,7 +81,7 @@ $max_font: 18px;
 }
 
 .nav_menu > li {
-  color: $color-teal;
+  color: $color-cyan;
   background-color: transparent;
   transition: all $_btn-transition;
 
@@ -92,7 +92,7 @@ $max_font: 18px;
 
   &:hover,
   &:active {
-    background-color: $color-teal;
+    background-color: $color-cyan;
     color: $color-white;
     background-image: url(https://www.crccs.com/wp-content/themes/crccs-custom/img/chevron-up.svg);
 
