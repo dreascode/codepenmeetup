@@ -28,17 +28,17 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
-          margin: `0 auto`,
+          margin: `1rem auto`,
           maxWidth: 960,
           padding: `0 1.0875rem 1.45rem`,
           
         }}
       >
         <main>{children}</main>
-        <footer style={{textAlign: `center`}}>
+      </div>
+      <footer style={{textAlign: `center`, background: `#11C4D4`, padding: `3rem`,  width: `100%`}}>
           © {new Date().getFullYear()}, this site is a work in progress.
         </footer>
-      </div>
     </>
   )
 }

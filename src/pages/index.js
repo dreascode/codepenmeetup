@@ -11,12 +11,17 @@ const IndexPage = () => (
 
     <SEO title="Home | Codepen Meetup Twin Cites, MN" />
     <h1>Monthly Online CodePen Meetup</h1>
-    <p><strong>May Meeting Details</strong></p>
+    <p><strong>Upcoming Meeting Details</strong><br/>
+    Sun, May 17, 2020 <br/>
+    11:00 AM – 1:00 PM CDT
+    </p>
+    <p>Schedule coming soon for June, July and August.</p>
     <p>
       Join the CodePen meetup via Zoom hosted by Andrea Edstrom. This meetup is for anyone who is interested in design or development.</p>
       <p><strong><a href="https://www.eventbrite.com/e/online-codepen-meetup-tickets-103074263898">Get your ticket here!</a></strong></p>
+      <p>Zoom invite information is emailed after you get your ticket.</p>
+      <br/>
 <p><strong>About this Event</strong></p>
-<p>Zoom invite information is emailed after you get your ticket.    </p>
 <p>
 This meetup is for anyone who is interested in design or development who enjoy CodePen. It is also for those who want to learn how to code. All skill levels are welcome. This event is open and free to all the local community. This event will be a Show & Tell of CodePen projects. The pen doesn't have to be your own, it can be a pen you admire.
 </p>
@@ -31,7 +36,7 @@ There will be:
 </p>
 
   <p>
-Show us something you did/found/inspired you on CodePen! If you are in need of inspiration checkout the CodePen picks or CodePen challenges. We would love to have you join!
+Show us something you did/found/inspired you on CodePen! If you are in need of inspiration checkout the <a href="https://codepen.io/picks/pens/">CodePen picks</a> or <a href="https://codepen.io/challenges/" >CodePen challenges</a>. We would love to have you join!
 </p>
 
 <p>
@@ -43,7 +48,7 @@ This event is hosted by Andrea Edstrom, she has no affiliation with CodePen. Thi
 </p>
 
 <p>
-Please review the CodePen.io Code of Conduct before attending.</p>
+Please review the <a href="https://blog.codepen.io/documentation/code-conduct/">CodePen.io Code of Conduct</a> before attending.</p>
 
  
   </Layout>
