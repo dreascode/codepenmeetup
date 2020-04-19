@@ -11,7 +11,11 @@ const IndexPage = () => (
 
     <SEO title="Home | Codepen Meetup Twin Cites, MN" />
     <h1>Monthly Online CodePen Meetup</h1>
-    <p><strong>May Meeting Details</strong></p>
+    <p><strong>Upcoming Meeting Details</strong><br/>
+    Sun, May 17, 2020 <br/>
+    11:00 AM – 1:00 PM CDT
+    </p>
+    <p>Schedule coming soon for June, July and August.</p>
     <p>
       Join the CodePen meetup via Zoom hosted by Andrea Edstrom. This meetup is for anyone who is interested in design or development.</p>
       <p><strong><a href="https://www.eventbrite.com/e/online-codepen-meetup-tickets-103074263898">Get your ticket here!</a></strong></p>
