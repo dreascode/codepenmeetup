@@ -17,7 +17,7 @@ $media-wide: 75em; //1200
 $media-logo-mobile: 26.250em; //480
 $_btn-transition: .175s;
 $font-family-serif: 'IBM Plex Serif', serif;
-$font-family-sans: 'IBM Plex Serif', serif;
+$font-family-sans: 'IBM Plex Sans', sans-serif;
 $font-family-cta: $font-family-sans;
 $font-family-default: $font-family-sans;
 $body-copy: $font-family-serif;
@@ -46,7 +46,7 @@ $color-gray-dark: #313B44;
 $color-selection: $color-mint;
 $color-default: $color-gray-dark;
 $color-bg: white;
-$color-header-bg: rgba($color-light-blue, 0.6);
+$color-header-bg: rgba($color-cyan, 0.6);
 $color-footer-bg: $color-blue-dark;
 
 //Color Links
@@ -58,7 +58,7 @@ $color-darken-blue: darken($color-blue, 10);
 $color-hover: saturate($color-lighten-blue, 20);
 $color-submenu: $color-blue;
 $color-submenu-hover: $color-blue;
-$color-light-blue-hover: darken($color-light-blue, 15);
+$color-light-blue-hover: darken($color-cyan, 15);
 
 //Color Button Like Links
 $color-darken-green: darken($color-green, 20);

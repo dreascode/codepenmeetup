@@ -1,0 +1,16 @@
+.link {
+  color: $color-blue;
+}
+
+.link-btn {
+  color: $color-white;
+  background: $color-blue;
+  padding: 1em;
+  border-radius: 3px;
+  transition: background $_btn-transition;
+
+  &:hover {
+    color: $color-white;
+    background: $color-darken-blue;
+  }
+}
