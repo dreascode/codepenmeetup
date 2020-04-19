@@ -1,0 +1,293 @@
+//--------------------------------------------------
+// Mixins
+//
+// Reusable CSS to be used inside selectors
+//--------------------------------------------------
+
+
+// Media query mixin. Will flatten media queries when the
+// $no-media-queries variable is set to true.
+//
+// For example, the following code with media queries:
+//
+// div { color: red; }
+// media (min-width: 24em) {
+//   div { color: blue; }
+// }
+//
+// will become:
+//
+// div { color: red; }
+// div { color: blue; }
+//
+// This means that legacy browsers will properly view
+// overridden tablet and desktop values instead of
+// displaying a mobile site
+// Source: http://seesparkbox.com/foundry/structuring_and_serving_styles_for_older_browsers
+$no-media-queries: false !default;
+$max-legacy-width: 60em;
+
+@mixin media($query) {
+  @if $no-media-queries{
+    @if $query < $max-legacy-width {
+      @content;
+    }
+  } @else {
+    @media ('min-width:' + $query) {
+      @content;
+    }
+  }
+}
+
+// Max-width media queries
+// Will not output for legacy browsers
+@mixin media-max($query) {
+  @if $no-media-queries == false {
+    @media ('max-width:' + $query) {
+      @content;
+    }
+  }
+}
+
+// Clearfix, self-clearing floats for containers
+// Nicholas Gallagher's micro clearfix: http://nicolasgallagher.com/micro-clearfix-hack/
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// ACCESSIBILITY
+@mixin invisible() {
+  // scss-lint:disable ImportantRule, DuplicateProperty
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@mixin skinny(){
+   display: block;
+   margin: auto;
+   width: 100%;
+   max-width: $max-width;
+}
+
+@mixin sitePadding() {
+ padding-left: 20px;
+ padding-right: 20px;
+}
+
+@mixin hdgLink(){
+  .hdg {
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+//link
+@mixin link(){
+    background-color: $color-white;
+    border: 3px solid $color-teal;
+    line-height: 1.6;
+    border-radius: 28px;
+    display: inline-block;
+    font-family: $font-family-cta;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .875em;
+    padding: 6px 18px;
+    transition: all $_btn-transition;
+
+    &:hover {
+      background-color: $color-teal;
+      color: $color-white;
+      border-color: $color-teal;
+    }
+
+    @include media($media-tablet) {
+      padding: 12px 24px;
+      font-size: 1em;
+    }
+}
+
+@mixin removeButtonStyles() {
+  border: 0;
+  background-color: transparent;
+}
+
+
+@mixin search {
+    width: 100%;
+    margin-bottom: 30px;
+
+    @include media($media-tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include media($media-desktop) {
+      margin-bottom: 80px;
+    }
+    
+    input {
+      width: 58%;
+      line-height: 2;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      padding: 0 .6em;
+
+      @include media($media-small-tablet) {
+        width: 65%;
+      }
+
+      @include media($media-tablet) {
+        line-height: 3;
+        width: 75%;
+      }
+
+      @include media($media-desktop) {
+        width: 80%;
+      }
+    }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      font-size: $min-font-size;
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+@mixin aspect-ratio($arglist...
+
+/*$ratio or $width, $height*/
+) {
+  $map: keywords($arglist);
+  $height: map-get($map, height) or nth-value($arglist, 2);
+  $width: map-get($map, width) or nth-value($arglist, 1);
+  $ratio: map-get($map, ratio) or if($width and $height, $width/$height, nth-value($arglist, 1)) or 1;
+  $padding: 1/$ratio * 100%;
+
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+    width: 1px;
+    margin-left: -1px;
+  }
+
+  &::before {
+    float: left;
+    padding-bottom: $padding;
+  }
+}
+
+// Helper function 
+// Return null rather than throwing an error if index is outside list range.    
+@function nth-value($list, $index) {
+  @return if(length($list) >=$index, nth($list, $index), null);
+}
+
+
+// UNDERLINES
+// Better looking underlines for hyperlinks, can be different than text color
+@mixin link-underline($underline-color, $underline-bg: $color-bg) {
+  background: linear-gradient($underline-bg, $underline-bg), linear-gradient($underline-bg, $underline-bg), linear-gradient($underline-color, $underline-color);
+  background-position: 0 90%, 100% 90%, 0 90%;
+  background-repeat: no-repeat, no-repeat, repeat-x;
+  background-size: .05em 1px, .05em 1px, 1px 1px;
+  text-shadow: .03em 0 $underline-bg, -.03em 0 $underline-bg, 0 .03em $underline-bg, 0 -.03em $underline-bg, .06em 0 $underline-bg, -.06em 0 $underline-bg, .09em 0 $underline-bg, -.09em 0 $underline-bg, .12em 0 $underline-bg, -.12em 0 $underline-bg, .15em 0 $underline-bg, -.15em 0 $underline-bg;
+
+  // scss-lint:disable VendorPrefix
+  &::-moz-selection { text-shadow: none; }
+  &::selection { text-shadow: none; }
+}
+
+// Blocks mixin
+@mixin blocks-layout($gutter, $sizes, $query:'', $label:'') {
+  @if $query != '' {
+    @include media($query) {
+      @each $size in $sizes {
+        $_width-without-gutters: 100% - ($gutter * $size);
+        $_block-width: $_width-without-gutters / $size;
+
+        .blocks-#{$label}-#{$size} {
+          > * {
+            width: $_block-width;
+          }
+        }
+      }
+    }
+  } @else {
+    @each $size in $sizes {
+      $_width-without-gutters: 100% - ($gutter * $size);
+      $_block-width: $_width-without-gutters / $size;
+
+      .blocks-#{$size} {
+        > * {
+          width: $_block-width;
+        }
+      }
+    }
+  }
+}
+
+// Aspect ratio
+// Pass in true as the third argument to remove the overflow:hidden prop
+@mixin aspect-ratio($width, $height, $overflow:'') {
+  @if $overflow == true {
+    overflow: visible;
+  }
+
+  &:before {
+    padding-top: ($height / $width) * 100%;
+  }
+}
+
+// Placeholder text styling for form Fields
+@mixin placeholder() {
+  // scss-lint:disable VendorPrefix
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {  /* Firefox 18- */
+    @content;
+  }
+
+  &::-moz-placeholder {  /* Firefox 19+ */
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

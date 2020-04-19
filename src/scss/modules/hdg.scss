@@ -1,0 +1,277 @@
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-sans;
+  font-weight: bold;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  line-height: 1.4;
+
+  @include media($media-small-tablet) {
+    font-size: 1.8em;
+  }
+    @include media($media-tablet) {
+      font-size: 2.2em;
+      margin-bottom: 15px;
+    }
+
+    @include media($media-d-w) {
+      font-size: 2.6em;
+      margin-bottom: 30px;
+  }
+}
+.hdg {
+  color: $color-hdg;
+  font-weight: bold;
+  @include clearfix();
+}
+
+h1, .hdg-1 {
+  font-size: 1.4em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+
+  @include media($media-small-tablet) {
+    font-size: 1.8em;
+  }
+
+  @include media($media-tablet) {
+    font-size: 2.2em;
+     margin-bottom: 15px;
+  }
+
+   @include media($media-d-w) {
+     font-size: 2.6em;
+     margin-bottom: 30px;
+   }
+}
+
+h2, .hdg-2 {
+  font-size: 1.4em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+
+  @include media($media-small-tablet) {
+    font-size: 1.4em;
+  }
+
+  @include media($media-tablet) {
+    font-size: 1.6em;
+    margin-bottom: 15px;
+  }
+
+  @include media($media-d-w) {
+    font-size: 2.6em;
+    margin-bottom: 30px;
+  }
+}
+
+h3, .hdg-3 {
+  font-size: 1.2em;
+  line-height: 1.2;
+
+  @include media($media-small-tablet) {
+    font-size: 1.4em;
+  }
+
+  @include media($media-tablet) {
+    font-size: 1.6em;
+  }
+
+  @include media($media-d-w) {
+    font-size: 1.8em;
+  }
+}
+
+h4, .hdg-4 {
+  font-size: .74em;
+
+  @include media($media-tablet) {
+    $min_width: 768px;
+    $max_width: 1100px;
+    $min_font: 15px;
+    $max_font: 18px;
+    // font-size: 1.1em;
+    line-height: 1;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  @include media(78.75) {
+    font-size: 1.4em;
+  }
+}
+
+.hdg-em {
+  font-size: 1em;
+  color: $color-gray;
+  border-bottom: 2px dotted $color-gray;
+  display: inline-block;
+  margin-top: 5px;
+
+  @include media($media-small-tablet) {
+    font-size: 1.2em;
+  }
+
+  @include media($media-tablet) {
+    font-size: 1.4em;
+  }
+
+  @include media($media-d-w) {
+    font-size: 1.6em;
+  }
+}
+
+.hdg-banner {
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  
+  @include media($media-small-tablet) {
+    font-size: 1.8em;
+  }
+
+    @include media($media-tablet) {
+      text-align: left;
+    }
+}
+
+.hdg-bottom-10px {
+  margin-bottom: 5px;
+
+  @include media($media-tablet) {
+    margin-bottom: 10px;
+  }
+
+  @include media($media-d-w) {
+    margin-bottom: 15px;
+  }
+}
+
+.hdg-bottom-20px {
+  margin-bottom: 10px;
+
+  @include media($media-tablet) {
+    margin-bottom: 15px;
+  }
+
+  @include media($media-d-w) {
+    margin-bottom: 30px;
+  }
+}
+
+.hdg-reverse {
+  color: $color-white;
+}
+
+.hdg-profile {
+  text-transform: capitalize;
+  margin-bottom: 7px;
+  @include media($media-tablet) {
+    margin-bottom: 14px;
+  }
+}
+
+.hdg-profile-none { 
+  margin-bottom: 0;
+}
+
+.hdg-profile-small {
+  margin-bottom: 4px;
+  color: $color-default;
+  font-family: $font-family-default;
+
+  font-size: 1em;
+
+    @include media($media-tablet) {
+      margin-bottom: 8px;
+      $min_width: 300px;
+      $max_width: 1100px;
+      $min_font: 18px;
+      $max_font: 20px;
+      // font-size: 1.1em;
+      line-height: 1;
+      @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    }
+
+    @include media(78.75) {
+      font-size: 1.4em;
+    }
+}
+
+.hdg-category {
+  font-weight: bold;
+}
+
+.hdg-center {
+  text-align: center;
+}
+
+.hdg-providers {
+  margin-top: 20px;
+}
+
+
+
+.hdg-top-10px {
+  margin-top: 5px;
+
+  @include media($media-tablet) {
+    margin-top: 10px;
+  }
+
+  @include media($media-d-w) {
+    margin-top: 15px;
+  }
+}
+
+.hdg-top-20px {
+  margin-top: 10px;
+
+  @include media($media-tablet) {
+    margin-top: 20px;
+  }
+
+  @include media($media-d-w) {
+    margin-top: 30px;
+  }
+}
+
+.hdg-top-40px {
+  margin-top: 25px;
+
+  @include media($media-tablet) {
+    margin-top: 40px;
+  }
+
+  @include media($media-d-w) {
+    margin-top: 30px;
+  }
+}
+
+.hdg-top-60px {
+    margin-top: 40px;
+
+    @include media($media-tablet) {
+      margin-top: 60px;
+    }
+
+    @include media($media-d-w) {
+      margin-top: 70px;
+    }
+}
+
+.hdg-default-color{
+  color: $color-default;
+}
+
+
+.hdg-btm-line {
+  border-bottom: $color-teal solid 1px;
+}
+
+.hdg-search-results {
+  font-style: italic;
+}

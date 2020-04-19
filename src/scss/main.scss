@@ -1,0 +1,46 @@
+//--------------------------------------------------
+// Main SCSS Directory 
+//
+// This is where all scss and css files are imported
+//--------------------------------------------------
+
+// Vendor
+// Imported libraries, etc.
+@import 'vendor/normalize.scss';
+// @import 'vendor/animate.scss';
+
+// Helpers
+// Sass variables, functions, mixins, etc. for use in other files.
+// NO output css should be used in these files.
+@import 'helpers/mixins';
+@import 'helpers/vars';
+@import 'helpers/vars_z_index';
+@import 'helpers/vars_banner';
+@import 'helpers/vars_layout';
+
+// Base
+// General-usage css, such as element fonts, styles, resets
+// @import 'base/fonts';
+@import 'base/elements';
+@import 'base/util';
+
+// Layout
+// Components used for sizing and containment, such as grid systems and columns
+@import 'layout/col';
+@import 'layout/container';
+@import 'layout/row';
+@import 'layout/section';
+@import 'layout/split';
+
+
+// Modules
+// For discrete interface components
+@import 'modules/article';
+@import 'modules/btn';
+@import 'modules/pagination';
+
+// Landmarks
+// Styling for specific pages or regions, generally not very modular
+@import 'landmarks/footer';
+@import 'landmarks/header';
+@import 'landmarks/nav';

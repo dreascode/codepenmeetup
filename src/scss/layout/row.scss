@@ -1,0 +1,16 @@
+//--------------------------------------------------
+// Row for containing column
+//--------------------------------------------------
+
+.row {
+  @include clearfix();
+  margin-bottom: 2rem;
+}
+
+.row-collection {
+  margin-bottom: 2rem;
+
+  @include media($media-tablet) {
+    margin-bottom: 4rem;
+   }
+}

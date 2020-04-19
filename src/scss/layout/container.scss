@@ -1,0 +1,17 @@
+/* container styles */
+.container {
+  background: $color-white;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.container_squeeze {
+  @include clearfix();
+   @include sitePadding();
+  display: block;
+  margin: auto;
+  width: 100%;
+  max-width: $max-width;
+}

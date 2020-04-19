@@ -1,0 +1,15 @@
+.pagination {
+  margin-top: 20px;
+
+  .page-numbers {
+    padding: 0 5px;
+
+    &.prev {
+      font-weight: bold;
+    }
+
+    &.next {
+      font-weight: bold;
+    }
+  }
+}
