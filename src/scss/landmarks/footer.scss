@@ -1,0 +1,193 @@
+/* footer styles */
+
+.footer {
+  @include clearfix();
+  background-color: $color-footer-bg;
+  color: $color-white;
+  font-family: $font-family-default;
+
+  a {
+    color: $color-white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  .copyright {
+    font-weight: bold;
+  }
+}
+
+.footer_inner {
+  width: 100%;
+  max-width: $max-width;
+  display: block;
+  margin: auto;
+  padding: 35px 15px 20px;
+
+}
+
+.footer_inner_left,
+.footer_inner_right {
+  $min_width: 300px;
+  $max_width: 1100px;
+  $min_font: 13px;
+  $max_font: 18px;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+
+  @include media($media-d-w) {
+    font-size: 1em;
+  }
+
+ 
+}
+
+.footer_inner_left {
+  display: block;
+  width: 100%;
+
+  @include media($media-tablet) {
+    display: inline-block;
+    vertical-align: top;
+    width: 45%;
+  }
+}
+
+.footer_inner_right {
+  display: block;
+  width: 100%;
+
+  @include media($media-tablet) {
+    display: inline-block;
+    width: 54%;
+  }
+}
+
+.footer_inner_logoWrapper {
+    position: relative;
+    height: auto;
+    width: 270px;
+    margin: auto;
+
+    svg {
+      fill: $color-white;
+    }
+
+    @include media($media-tablet) {
+      margin: 0;
+    }
+}
+
+.footer_phone_icon {
+  position: relative;
+  top: 3px;
+  margin-right: 4px;
+
+  svg {
+    fill: $color-white;
+  }
+}
+
+.footer_phone {
+  @include clearfix();
+  display: block;
+  font-size: .9em;
+  text-align: center;
+  
+  > * {
+    display: inline-block;
+    font-weight: bold;
+    width: auto;
+  }
+
+  @include media($media-tablet) {
+    margin-top: 45px;
+    text-align: left;
+  }
+}
+
+.footer_photo_seperater {
+  margin: 0 6px;
+}
+
+.footer_menus {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 30px;
+
+  @include media($media-tablet) {
+    text-align: right;
+    margin-top: 0;
+    // margin-right: 30px;
+    margin-bottom: 60px;
+  }
+
+  .nav-locations,
+  .nav-about,
+  .nav-follow {
+    display: inline-block;
+    margin-right: 30px;
+    margin-top: 20px;
+    vertical-align: top;
+    text-align: center;
+    width: 100%;
+
+    li {
+      line-height: 1.8;
+      &:first-child {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    @include media($media-m-t) {
+      text-align: left;
+      width: auto;
+    }
+
+    @include media($media-tablet) {
+
+      margin-right: 10%;
+    }
+
+  }
+
+  .nav-follow {
+    margin-right: 0;
+  }
+}
+
+  .nav-footer {
+    display: block;
+    font-size: .875em;
+    text-align: center;
+    margin-top: 30px;
+
+    li {
+      display: inline-block;
+      margin-right: 33px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+
+    @include media($media-tablet) {
+      margin-top: 0;
+      text-align: right;
+    }
+  }
+
+.footer_copyright {
+  font-size: .875em;
+  text-align: center;
+
+    @include media($media-tablet) {
+      text-align: left;
+    }
+}
+

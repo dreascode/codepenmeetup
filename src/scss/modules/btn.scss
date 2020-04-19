@@ -1,0 +1,30 @@
+/*doc
+---
+title: Buttons
+name: btn
+category: Interface
+---
+
+Buttons with different sizes
+
+```html_example
+<a href="#" class="btn">Regular button</a>
+<a href="#" class="btn btn-small">Small button</a>
+```
+
+*/
+.btn-wrapper {
+  padding: 1.5em;
+}
+
+.btn {
+  /* SUBMIT: */
+  font-family: $font-family-cta;
+  font-size: 12px;
+  color: $color-button;
+  letter-spacing: 0;
+  text-align: center;
+  border: 0;
+  border-radius: 5px;
+}
+

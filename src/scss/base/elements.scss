@@ -1,0 +1,164 @@
+html {
+  box-sizing: border-box;
+  font-size: $font-size-root;
+}
+
+*,
+*:before,
+*:after {
+  // Use border-box unless its parent is modified
+  // More reading: http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+  box-sizing: inherit;
+}
+
+// scss-lint:disable VendorPrefix
+::-moz-selection { background: $color-selection; }
+::selection { background: $color-selection; }
+
+body {
+  font-family: $font-family-default;
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  -webkit-font-smoothing: antialiased;
+  color: $color-default;
+  background: $color-bg;
+  // letter-spacing: .25px;
+}
+
+// Unstyle lists generally; lists are restyled in landmarks/content.scss
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+article {
+  ul,
+  ol,
+  li {
+    margin: 15px;
+    padding: 0;
+    list-style: disc;
+  }
+  
+  ul {
+    margin-top: 1.8em;
+    margin-bottom: 1.8em;
+  }
+
+  ul ul {
+    margin: 0;
+  }
+
+  #blog_images {
+    display: block;
+
+    li {
+      list-style: none;
+      display: inline-block;
+      margin: 0 2px 0 0;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+  margin: 0;
+}
+
+p {
+  $min_width: 300px;
+  $max_width: 767px;
+  $min_font: 15px;
+  $max_font: 18px;
+  margin-top: 1.8em;
+  margin-bottom: 1.8em;
+  line-height: 1.6;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  // font-size: 15px;
+
+ @include media($media-tablet) {
+   font-size: 1em;
+ }
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+q {
+  &:before,
+  &:after {
+    content: ''; // Removes automatic quotation marks
+  }
+}
+
+blockquote {
+  &:before,
+  &:after {
+    content: ''; // Removes automatic quotation marks
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+a {
+  color: $color-link;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-hover;
+  }
+}
+
+article {
+   a {
+    color: $color-link;
+    text-decoration: underline;
+
+    &:hover {
+     color: $color-hover;
+    }
+
+    &.link {
+      text-decoration: none;
+    }
+  }
+}
+
+iframe {
+  overflow: hidden;
+
+  input {
+    @include link();
+    background-color: $color-mint;
+    border-color: $color-mint;
+    color: $color-white;
+    @include clearfix();
+
+    &:hover {
+      background-color: $color-mint-darker;
+      border-color: $color-mint-darker;
+      color: $color-white;
+    }
+  }
+}

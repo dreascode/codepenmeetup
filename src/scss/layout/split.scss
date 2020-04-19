@@ -1,0 +1,32 @@
+/*doc
+---
+title: Split
+name: split
+category: Layout
+---
+
+Floats content left or right. Uses the parent `.split` container for clearfix
+
+```html_example
+<div class="split">
+  <div class="split_first">
+    Left-aligned content
+  </div>
+  <div class="split_last">
+    Right-aligned content
+  </div>
+</div>
+```
+*/
+
+.split {
+  @include clearfix();
+}
+
+.split_first {
+  float: left;
+}
+
+.split_last {
+  float: right;
+}

@@ -1,0 +1,153 @@
+/* Header Styles */
+
+.header {
+  font-family: 'IBM Plex Serif', serif;
+  font-weight: bold;
+  
+}
+
+.header_top {
+  @include clearfix();
+  @include skinny();
+  @include sitePadding();
+  position: relative;
+
+  > * {
+    vertical-align: middle;
+  }
+
+    @include media($media-tablet) {
+      height: 84px;
+      text-align: center;
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    @include media($media-d-w) {
+      height: 54px;
+      //ie bug fix
+      text-align: justify;
+      text-align: unset;
+    }
+}
+
+.header_bottom {
+  background-color: $color-header-bg;
+  width: $full-width;
+
+  @include media($media-tablet) {
+    height: 190px;
+  }
+
+  @include media($media-d-w) {
+    height: 133px;
+  }
+}
+
+.header_bottom_wrapper {
+  @include clearfix();
+  @include skinny();
+  @include sitePadding();
+  position: relative;
+  padding-top: 8px;
+
+  @include media($media-logo-mobile) {
+    padding-top: 0;
+  }
+}
+
+.header_top_left, 
+.header_top_right {
+  display: none;
+
+  @include media($media-tablet) {
+    display: inline-block;
+  }
+}
+
+.header_top_right {
+  @include media($media-tablet) {
+    text-align: center;
+    width: 100%;
+  }
+
+  @include media($media-d-w) {
+    position: absolute;
+    right: 20px;
+    width: auto;
+  }
+
+}
+
+.header_top_left {
+  font-size: .8em;
+
+  @include media($media-tablet) {
+    text-align: center;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+
+  @include media($media-d-w) {
+    text-align: left;
+    width: 300px;
+   }
+}
+
+.header_top_left_item {
+  display: inline-block;
+
+  &:first-child {
+    padding-right: 25px;
+  }
+}
+
+.header_logo_wrapper {
+  width: 158px;
+  height: 52px;
+
+  @include media($media-logo-mobile) {
+    position: relative;
+    height: auto;
+    width: 265px;
+  }
+  
+}
+
+.header_logo {
+  // width: 100px;
+  // height: 52px;
+  height: 80px;
+  margin-left: -10px;
+
+  @include media($media-logo-mobile) {
+    height: 133px;
+    width: 265px;
+    margin-left: 0;
+  }
+
+  @include media($media-tablet) {
+    display: block;
+    margin: auto;
+  }
+
+  @include media($media-d-w) {
+    display: inline-block;
+    margin: 0;
+  }
+
+}
+
+.header_nav {
+ 
+  @include media($media-tablet) {
+    
+  }
+
+  @include media($media-d-w) {
+    position: absolute;
+    right: 20px;
+    top: 0;
+    padding: 44px 0;
+  }
+}

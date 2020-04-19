@@ -1,0 +1,168 @@
+.nav {
+  display: block;
+
+  @include media($media-tablet) {
+    text-align: justify;
+    line-height: 2.4;
+    position: relative;
+  }
+}
+
+.nav_menu {
+  display: none;
+  
+    @include media($media-tablet) {
+      position: relative;
+      display: block;
+      text-align: center;
+      width: 100%;
+    }
+
+    @include media($media-d-w) {
+      text-align: right;
+    }
+}
+
+.nav_menu ul {
+  position: relative;
+}
+
+/* link container in nav menu*/
+.nav_menu > li {
+  display: inline-block;
+  margin-right: 28px;
+  background-image: url(https://www.crccs.com/wp-content/themes/crccs-custom/img/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-size: 10px 10px;
+  background-position: 95%, center;
+
+  &:last-child {
+    margin-right: 0;
+    background-image: none;
+  }
+}
+
+$min_width: 767px;
+$max_width: 1100px;
+$min_font: 14px;
+$max_font: 18px;
+
+/* link in nav menu*/
+.nav_menu > li > a {
+  padding: 0 8px;
+  height: 32px;
+  margin-right: 16px;
+
+  &:last-child { 
+    margin-right: 0
+  }
+
+  @include media($media-tablet) {
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  }
+
+  @include media($media-d-w) {
+    font-size: 1em;
+    padding: 0 8px;
+  }
+}
+
+.nav {
+  input[type=checkbox] {
+    display: none;
+  }
+  input[type=checkbox]:checked~ul {
+    display: block
+  }
+
+  input[type=checkbox]:checked~label {
+    background: transparent;
+  }
+}
+
+.nav_menu > li {
+  color: $color-teal;
+  background-color: transparent;
+  transition: all $_btn-transition;
+
+  a {
+    color: $color-black;
+    transition: all $_btn-transition;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-teal;
+    color: $color-white;
+    background-image: url(https://www.crccs.com/wp-content/themes/crccs-custom/img/chevron-up.svg);
+
+    &:last-child {
+      background-image: none;
+    }
+    > a {
+      color: $color-white;
+      transition: all $_btn-transition;
+    }   
+  }
+
+  /* sub menu */
+  .sub-menu>li>a {
+    padding: 0 8px;
+    height: auto;
+
+    $min_width: 767px;
+    $max_width: 1100px;
+    $min_font: 14px;
+    $max_font: 18px;
+
+      @include media($media-tablet) {
+        @include fluid-type($min_width, $max_width, $min_font, $max_font);
+      }
+      @include media($media-d-w) {
+        font-size: 1em; 
+      }
+  }
+
+  ul.sub-menu li {
+    display: none;
+  }
+  
+  &:hover > ul.sub-menu {
+    background: $color-submenu;
+    display: block;
+    position: absolute;
+    top: 42px;
+    z-index: $z-nav;
+  }
+
+  &:hover > ul.sub-menu li {
+    display: block;
+    text-align: left;
+    min-width: 200px;
+    width: 100%;
+    transition: all $_btn-transition;
+
+    > a {
+      color: $color-white;
+      display: block;
+      transition: all $_btn-transition;
+
+      /* sub menu hover*/
+      &:hover {
+        background-color: $color-submenu-hover;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  /* sub menu > sub menu*/
+  .sub-menu li > .sub-menu>li>a {
+    padding: 0 8px;
+    height: auto;
+  }
+
+  .sub-menu li >.sub-menu li {
+    display: none;
+  }
+}
