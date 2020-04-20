@@ -2,7 +2,7 @@ import React from "react"
 import IconTwitter from "../components/iconTwitter"
 
 const Sidebar = () => (
-    <article>
+    <aside className="aside">
       <section className="section">
         <h2 className="hdg hdg-4">Sponsor shoutout</h2>
         <p>
@@ -22,7 +22,7 @@ const Sidebar = () => (
         <a href="https://twitter.com/codepenmeetup" className="link link-btn small">
         <IconTwitter/> @codepenmeetup </a> </p>
       </section>
-    </article>
+    </aside>
 )
 
 export default Sidebar

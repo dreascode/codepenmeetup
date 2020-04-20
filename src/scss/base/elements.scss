@@ -156,3 +156,9 @@ iframe {
     }
   }
 }
+
+.aside {
+  @include media($media-tablet) { 
+    margin-top: 0.875em; 
+  }
+}
