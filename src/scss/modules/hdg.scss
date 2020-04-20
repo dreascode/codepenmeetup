@@ -27,80 +27,69 @@ h1 {
   font-weight: bold;
   @include clearfix();
   margin: 0;
+  line-height: 1.5;
 }
 
 h1, .hdg-1 {
-  font-size: 1.6em;
-  line-height: 1.4;
-  margin-bottom: 10px;
-
-  @include media($media-small-tablet) {
-    font-size: 1.8em;
-  }
+  font-size: 1.953em;
+  margin-bottom: .875em;
 
   @include media($media-tablet) {
-    font-size: 2.2em;
-     margin-bottom: 15px;
+    font-size: 3.052em;
+    margin-bottom: 1em;
   }
-
-   @include media($media-d-w) {
-     font-size: 2.6em;
-     margin-bottom: 30px;
-   }
 }
 
 h2, .hdg-2 {
-  font-size: 1.4em;
-  line-height: 1.4;
-  margin-bottom: 10px;
-
-  @include media($media-small-tablet) {
-    font-size: 1.4em;
-  }
+  font-size: 1.563em;
+  margin-bottom: .875em;
 
   @include media($media-tablet) {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-  }
-
-  @include media($media-d-w) {
-    font-size: 2.6em;
-    margin-bottom: 30px;
+    font-size: 2.441em;
+    margin-bottom: 1em;
   }
 }
 
 h3, .hdg-3 {
-  font-size: 1.2em;
-  line-height: 1.2;
-
-  @include media($media-small-tablet) {
-    font-size: 1.4em;
-  }
+  font-size: 1.25em;
+  margin-bottom: .5em;
 
   @include media($media-tablet) {
-    font-size: 1.6em;
-  }
-
-  @include media($media-d-w) {
-    font-size: 1.8em;
+    font-size: 1.953em;
   }
 }
 
 h4, .hdg-4 {
-  font-size: .74em;
+  font-size: 1em;
 
   @include media($media-tablet) {
-    $min_width: 768px;
-    $max_width: 1100px;
-    $min_font: 15px;
-    $max_font: 18px;
-    // font-size: 1.1em;
-    line-height: 1;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    font-size: 1.563em;
   }
 
-  @include media(78.75) {
-    font-size: 1.4em;
+
+}
+
+h4, .hdg-4 {
+  font-size: .8em;
+
+  @include media($media-tablet) {
+    font-size: 1.25em;
+  }
+}
+
+h5, .hdg-5 {
+  font-size: .64em;
+
+  @include media($media-tablet) {
+    font-size: 1em;
+  }
+}
+
+.small {
+  font-size: .64em;
+
+  @include media($media-tablet) {
+    font-size: 1em;
   }
 }
 
