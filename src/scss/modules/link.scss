@@ -3,15 +3,25 @@
 }
 
 .link-btn {
+  font-family: $font-family-cta;
   display: inline-flex;
   color: $color-white;
+  align-content: center;
+  font-weight: bold;
   background: $color-blue;
-  padding: 1em;
+  padding: .75em 1em;
   border-radius: 3px;
   transition: background $_btn-transition;
+  font-size: .875em;
+  align-content: center;
+  align-items: center;
 
   &:hover {
     color: $color-white;
     background: $color-darken-blue;
+  }
+
+  &.small {
+    padding: .25em .5em;
   }
 }

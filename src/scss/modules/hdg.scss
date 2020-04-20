@@ -26,10 +26,11 @@ h1 {
   color: $color-hdg;
   font-weight: bold;
   @include clearfix();
+  margin: 0;
 }
 
 h1, .hdg-1 {
-  font-size: 1.4em;
+  font-size: 1.6em;
   line-height: 1.4;
   margin-bottom: 10px;
 

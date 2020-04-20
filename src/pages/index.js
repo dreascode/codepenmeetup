@@ -17,7 +17,7 @@ const IndexPage = () => (
               <p><strong>Sunday, May 17, 2020 from 11:00 AM – 1:00 PM CDT</strong></p>
               <p>
               Join the virtual CodePen meetup via Zoom hosted by Andrea Edstrom. This meetup is for anyone who is interested in design or development. Pick up a ticket by clicking the link below. Zoom invite information is emailed after you get your ticket.</p>
-              <p><strong><a href="https://www.eventbrite.com/e/online-codepen-meetup-tickets-103074263898" className="link link-btn">Get your ticket here!</a></strong></p>
+              <p><strong><a href="https://www.eventbrite.com/e/online-codepen-meetup-tickets-103074263898" className="link link-btn">Get a ticket</a></strong></p>
           
               </section>
             
