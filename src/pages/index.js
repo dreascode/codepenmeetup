@@ -2,7 +2,7 @@ import React from "react"
 import "../scss/main.scss"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Sidebar from "../components/Sidebar"
+import Sidebar from "./sidebar"
 
 const IndexPage = () => (
   <Layout>
