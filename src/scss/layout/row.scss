@@ -3,14 +3,10 @@
 //--------------------------------------------------
 
 .row {
-  @include clearfix();
-  margin-bottom: 2rem;
-}
+  display: block;
 
-.row-collection {
-  margin-bottom: 2rem;
-
-  @include media($media-tablet) {
-    margin-bottom: 4rem;
-   }
+  @include media($media-tablet) { 
+    display: flex;
+    flex-direction: row;
+  }
 }

@@ -25,14 +25,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `1rem auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-          
-        }}
-      >
+      <div className="container container_squeeze" >
         <main>{children}</main>
       </div>
       <footer style={{textAlign: `center`, background: `#11C4D4`, padding: `3rem`,  width: `100%`}}>
