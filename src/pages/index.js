@@ -13,10 +13,10 @@ const IndexPage = () => (
           
           <article className="article">
             <section className="section section-border">
-              <h1 className="hdg hdg-3">Upcoming Online CodePen Meetup Details</h1>
+              <h1 className="hdg hdg-3">Upcoming Meetup Details</h1>
               <p><strong>Sunday, May 17, 2020 from 11:00 AM – 1:00 PM CDT</strong></p>
               <p>
-              Join the CodePen meetup via Zoom hosted by Andrea Edstrom. This meetup is for anyone who is interested in design or development. Pick up a ticket by clicking the link below. Zoom invite information is emailed after you get your ticket.</p>
+              Join the virtual CodePen meetup via Zoom hosted by Andrea Edstrom. This meetup is for anyone who is interested in design or development. Pick up a ticket by clicking the link below. Zoom invite information is emailed after you get your ticket.</p>
               <p><strong><a href="https://www.eventbrite.com/e/online-codepen-meetup-tickets-103074263898" className="link link-btn">Get your ticket here!</a></strong></p>
           
               </section>
