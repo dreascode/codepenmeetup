@@ -1,4 +1,12 @@
 .section {
-  margin-bottom: 60px;
+  margin: 40px 0;
+
+  @include media($media-tablet) { 
+    margin: 60px 0;
+  }
 }
 
+.section-border {
+  border-bottom: 1px solid $color-mint;
+  padding-bottom: 60px;
+}
