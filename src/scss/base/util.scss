@@ -16,9 +16,8 @@
   @include invisible();
 }
 
-
 body {
-  font-family: 'IBM Plex Serif', serif;
+  font-family: "IBM Plex Serif", serif;
   font-family: $body-copy;
   line-height: 1.6;
 }
@@ -27,16 +26,13 @@ a {
   text-decoration: none;
 }
 
-
 aside {
   display: block;
-  @media screen and (min-width: 56.250em) {
+  @media screen and (min-width: 56.25em) {
     display: inline-block;
   }
 }
 
-
-
-
-
-
+.event {
+  margin-bottom: 2rem;
+}
