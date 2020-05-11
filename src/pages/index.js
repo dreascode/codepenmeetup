@@ -35,6 +35,7 @@ const IndexPage = () => (
                   </a>
                 </strong>
               </p>
+              <br />
               <p>
                 <strong>
                   Sunday, June 14, 2020 from 11:00 AM – 12:00 PM CDT
@@ -44,6 +45,22 @@ const IndexPage = () => (
                 <strong>
                   <a
                     href="https://www.eventbrite.com/e/june-online-codepen-meetup-tickets-104975450398"
+                    className="link link-btn"
+                  >
+                    Get a ticket
+                  </a>
+                </strong>
+              </p>
+              <br />
+              <p>
+                <strong>
+                  Sunday, July 19, 2020 from 11:00 AM – 12:00 PM CDT
+                </strong>
+              </p>
+              <p>
+                <strong>
+                  <a
+                    href="https://www.eventbrite.com/e/july-online-codepen-meetup-tickets-104976658010"
                     className="link link-btn"
                   >
                     Get a ticket
