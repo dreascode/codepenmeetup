@@ -20,24 +20,7 @@ const IndexPage = () => (
                 or development. Pick up a ticket by clicking the link below.
                 Zoom invite information is emailed after you get your ticket.
               </p>
-      
-              <div className="event">
-                <p>
-                  <strong>
-                    Sunday, June 14, 2020 from 11:00 AM – 12:00 PM CDT
-                  </strong>
-                </p>
-                <p>
-                  <strong>
-                    <a
-                      href="https://www.eventbrite.com/e/june-online-codepen-meetup-tickets-104975450398"
-                      className="link link-btn"
-                    >
-                      Get a ticket
-                    </a>
-                  </strong>
-                </p>
-              </div>
+
               <div className="event">
                 <p>
                   <strong>
