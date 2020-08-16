@@ -6,7 +6,7 @@ const Sidebar = () => (
       <section className="section">
         <h2 className="hdg hdg-4">Sponsor shoutout</h2>
         <p>
-        This event is hosted by Andrea Edstrom, she has no affiliation with CodePen. This event is sponsored by Minnesota Public Radio. Thank you to Minnesota Public Radio for providing the pro Zoom account.
+        This event is hosted by Andrea Edstrom, she has no affiliation with CodePen. This event is sponsored by <a href="https://andreaedstrom.com/">Andrea Edstrom</a>. 
         </p>
       </section>
       <section className="section">
