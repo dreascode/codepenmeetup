@@ -30,7 +30,7 @@ const IndexPage = () => (
                 <p>
                   <strong>
                     <a
-                      href="https://www.eventbrite.com/e/september-online-codepen-meetup-tickets-117175813011"
+                      href="https://www.eventbrite.com/e/october-online-codepen-meetup-tickets-121981785805"
                       className="link link-btn"
                     >
                       Get a ticket
