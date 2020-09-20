@@ -24,7 +24,7 @@ const IndexPage = () => (
               <div className="event">
                 <p>
                   <strong>
-                    Sunday, September 20, 2020 from 11:00 AM – 12:00 PM CDT
+                    Sunday, October 18, 2020 from 11:00 AM – 12:00 PM CDT
                   </strong>
                 </p>
                 <p>
