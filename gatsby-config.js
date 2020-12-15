@@ -32,18 +32,20 @@ module.exports = {
     `gatsby-plugin-offline`,
     `gatsby-plugin-sass`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-webfonts`,
       options: {
-        fonts: [
-          {
-            family: `IBM Plex Serif`,
-            variants: [`400`, `400i`, `700`, `700i`,]
-          },
-          {
-            family: `IBM Plex Sans`,
-            variants: [`700`]
-          },
-        ],
+        fonts: {
+          google: [
+            {
+              family: `IBM Plex Serif`,
+              variants: [`400`, `400i`, `700`, `700i`,]
+            },
+            {
+              family: `IBM Plex Sans`,
+              variants: [`700`]
+            },
+          ],
+        },
       },
     }
     // {
