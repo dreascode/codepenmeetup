@@ -24,13 +24,13 @@ const IndexPage = () => (
               <div className="event">
                 <p>
                   <strong>
-                    Sunday, January 17, 2020 from 11:00 AM – 12:00 PM CDT
+                    Sunday, February 21, 2021 from 11:00 AM – 12:00 PM CDT
                   </strong>
                 </p>
                 <p>
                   <strong>
                     <a
-                      href="https://www.eventbrite.com/e/january-online-codepen-meetup-tickets-132712957027"
+                      href="https://www.eventbrite.com/e/february-online-codepen-meetup-tickets-137174617975"
                       className="link link-btn"
                     >
                       Get a ticket
