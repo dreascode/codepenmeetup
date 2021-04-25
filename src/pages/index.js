@@ -24,17 +24,7 @@ const IndexPage = () => (
               <div className="event">
                 <p>
                   <strong>
-                    Sunday, March 21, 2021 from 11:00 AM – 12:00 PM CDT
-                  </strong>
-                </p>
-                <p>
-                  <strong>
-                    <a
-                      href="https://www.eventbrite.com/e/march-online-codepen-meetup-tickets-142397156729"
-                      className="link link-btn"
-                    >
-                      Get a ticket
-                    </a>
+                   Sorry there are no current meetups scheduled.
                   </strong>
                 </p>
               </div>
